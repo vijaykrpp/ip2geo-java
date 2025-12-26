@@ -1,4 +1,7 @@
-# ip2geo — Java SDK
+# Ip2Geo Java SDK
+
+[![Maven Central](https://img.shields.io/maven-central/v/com.ip2geoapi/ip2geo-java.svg)](https://central.sonatype.com/artifact/com.ip2geoapi/ip2geo-java)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 Official Java SDK for the **Ip2Geo API** — fast IP geolocation, network intelligence, and security risk detection.
 
@@ -47,15 +50,17 @@ This SDK uses Java 11+ and Maven.
 
 ```xml
 <dependency>
-  <groupId>com.ip2geo</groupId>
+  <groupId>com.ip2geoapi</groupId>
   <artifactId>ip2geo-java</artifactId>
-  <version>0.1.0</version>
+  <version>1.0.0</version>
 </dependency>
 ```
 
 ## Quick Start
 
 ```java
+import com.ip2geo.Ip2GeoClient;
+
 Ip2GeoClient client = new Ip2GeoClient("API_KEY");
 
 Object response = client.lookup("8.8.8.8", null, null);
@@ -65,6 +70,8 @@ System.out.println(response);
 ### Lookup your IP
 
 ```java
+import com.ip2geo.Ip2GeoClient;
+
 Ip2GeoClient client = new Ip2GeoClient("API_KEY");
 
 Object response = client.lookup("check", null, null);
